@@ -60,14 +60,14 @@ function creerListe(){
             const elLiFrom = document.createElement('li')
             elLiFrom.classList.add('liFrom')
             elLiFrom.textContent = codeMonnaie
-            elLiFrom.style.listStyleImage = `url(./drapeaux/${codeMonnaie}.jpg)`; 
+            elLiFrom.style.listStyleImage = `url(/drapeaux/${codeMonnaie}.jpg)`; 
             divLiFrom.append(elLiFrom)
             //pour la div "to"
             const divLiTo = document.createElement('div')  
             const elLiTo = document.createElement('li')
             elLiTo.classList.add('liTo')
             elLiTo.textContent = codeMonnaie
-            elLiTo.style.listStyleImage = `url(./drapeaux/${codeMonnaie}.jpg)`;
+            elLiTo.style.listStyleImage = `url(/drapeaux/${codeMonnaie}.jpg)`;
             divLiTo.append(elLiTo)             
             //on injecte les deux :
             elUlListeFrom.append(divLiFrom)
@@ -193,7 +193,7 @@ function monnaieRechercheFrom(){
                 const elLi = document.createElement('li')
                 elLi.classList.add('liFrom')
                 elLi.textContent = code
-                elLi.style.listStyleImage = `url(./drapeaux/${code}.jpg)`;
+                elLi.style.listStyleImage = `url(/drapeaux/${code}.jpg)`;
                 divLiFrom.append(elLi)
                 elUlListeFromSearch.append(divLiFrom)        
             });
@@ -222,7 +222,7 @@ function monnaieRechercheTo(){
                 const elLi = document.createElement('li')
                 elLi.classList.add('liTo')
                 elLi.textContent = code
-                elLi.style.listStyleImage = `url(./drapeaux/${code}.jpg)`;    
+                elLi.style.listStyleImage = `url(/drapeaux/${code}.jpg)`;    
                 divLiTo.append(elLi)        
                 elUlListeToSearch.append(divLiTo)          
             });
