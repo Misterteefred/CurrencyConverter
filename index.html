@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Convertisseur de devises</title>
+</head>
+<body>
+    <header>
+        <h1>Convertisseur de devises</h1>
+    </header>
+    <div class="containerMain">
+        
+        <form>
+            <div class="divMontant">
+                <h3>Montant</h3>
+                <input type="text" name ="montant"class="inputMontant" value="1">
+            </div>
+            
+           
+            <div class="containerFrom">
+                <h3>Depuis</h3>
+                <div class="divFrom">
+                    <li class="liDivFrom" style="list-style-image: url(&quot;./drapeaux/EUR.jpg&quot;);">EUR</li>
+                    <button class="buttonFa-solid boutonselectFrom" type="submit">
+                        <i class="fa-solid fa-arrow-down"></i>  
+                    </button>
+                </div>
+                <div class="divInputFrom ">
+                    <input type="text" name ="from" class="inputFrom"> 
+                    <!--  -->
+                    <button class="buttonFa-solid boutonXFrom" type="submit">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="listeFrom animate__animated animate__fadeIn">
+                    <ul class="ulListeFrom "></ul>
+                </div>
+                <div class="listeFromSearch animate__animated animate__fadeIn">
+                    <ul class="ulListeFromSearch"></ul>
+                </div>
+            </div>
+
+            <button class="boutonInverser boutonInverserPC" type="submit">
+                <i class="fa-solid fa-arrows-left-right"></i>
+            </button>
+            <button class="boutonInverser boutonInverserMobile" type="submit">
+                <i class="fa-solid fa-arrows-up-down"></i>
+            </button>
+            
+            <div class="containerTo">
+                <h3>Vers</h3>
+                <div class="divTo">
+                    <li class="liDivTo" style="list-style-image: url(&quot;./drapeaux/USD.jpg&quot;);">USD</li>
+                    <button class="buttonFa-solid boutonselectTo" type="submit">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </button>
+                </div>
+                <div class="divInputTo">
+                    <input type="text" class="inputTo">
+                    <button class="buttonFa-solid boutonXTo" type="submit">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="listeTo animate__animated animate__fadeIn">
+                    <ul class="ulListeTo"></ul>
+                </div>
+                <div class="listeToSearch animate__animated animate__fadeIn">
+                    <ul class="ulListeToSearch"></ul>
+                </div>
+            </div>             
+        </form>
+        <div class="divResultat ">
+            <div class="divButton">
+                <button class="buttonConvert" type="submit">Convertir</button>
+            </div>
+            <div class="conversion">
+                <div class="divCalcule">
+                    <p class="pFrom"></p>
+                    <p class="pTo"></p>
+                </div>                
+                <div class="taux">
+                    <p class="txFrom"></p>
+                    <p class="txTo"><p>                
+                </div>
+            </div>            
+            
+            
+        </div>
+        
+    </div>
+   
+    <footer>
+        <p>Données mises à jours quotidiennement via <a href="https://www.exchangerate-api.com" target="_blank">ExchangeRate</a>.</p> <p> Frédéric Poulain - 2022</p>
+    </footer>
+
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>

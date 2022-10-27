@@ -1,0 +1,420 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(64, 64, 64, 0.268),rgba(121, 121, 121, 0.208)), url("./img/fond.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    
+    
+}
+header{
+    background-color: transparent;
+    /* background-image: linear-gradient(120deg,#2d31a4, #0c134e, #260558); */
+    width: 100%;
+    text-align: center;    
+    height: 150px;
+
+}
+header h1{
+    margin-top: 45px;
+    
+    color: rgb(236, 235, 235);
+    font-size: 3em;
+}
+.containerMain{
+    display: flex;
+    flex-direction: column;  
+    align-content: center;   
+    background-color: rgba(251, 251, 251, 0.801);
+    width: 100%;
+    height: 300px;  
+    
+}
+
+/*------------FORMULAIRE------*/
+
+form{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 70px auto 10px;    
+    width: 100%; 
+    
+}
+h3{
+    position: absolute;
+    top: -50px;
+}
+.divMontant{
+    width: 25%;
+}
+.inputMontant{    
+    border: 1px rgba(0, 0, 0, 0.503) solid;  
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    height: 40px;
+    width: 100%;
+    outline: none;
+       
+}
+
+
+.containerFrom, .containerTo{
+    position: relative;
+    width: 25%;
+    
+}
+.divFrom, .divTo{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 40px;
+    /*à l'origine, en flex*/
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    
+}
+.divFrom li, .divTo li{
+    pointer-events: none;
+    list-style-type: none;
+    
+}
+
+.liDivFrom, .liDivTo{
+    margin: auto;
+    margin-left: 40px;
+    font-size: 17px;
+}
+
+
+/*  ---- DIV INVISIBLE --- */
+.divInputFrom, .divInputTo{
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    
+    display: none;
+    width: 100%;
+}
+
+.inputFrom, .inputTo {
+    /* color: #061048;
+    width: 100px;
+    cursor: pointer;
+    padding: 12px; */
+    border:none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    outline: none
+    
+}
+/* -------------------------*/
+.divHide{
+    display: none;
+}
+.divInputVisible{
+    display: block;
+}
+
+.buttonFa-solid{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border:none;
+    background-color: white;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 17px;
+}
+
+.fa-solid {
+    pointer-events: none;    
+}
+
+.listeFrom, .listeTo, .listeFromSearch, .listeToSearch{
+    background-color: white;
+    position: absolute;
+    top : 48px;
+    width: 100%;
+    overflow: hidden;
+    overflow: scroll;
+    display: none;
+    height: 290px;
+    overflow-x: hidden;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 6px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 8px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 8px -1px rgba(0,0,0,0.75);
+    z-index : 1;
+}
+.ulListeFrom, .ulListeTo, .ulListeFromSearch, .ulListeToSearch{
+    position: relative;
+}
+.ulListeFrom, .ulListeTo, .ulListeFromSearch, .ulListeToSearch{
+    padding-left: 0;
+}
+.ulListeFrom div,
+.ulListeTo div,
+.ulListeFromSearch div,
+.ulListeToSearch div{
+    cursor: pointer;
+}
+.ulListeFrom div:hover,
+.ulListeTo div:hover,
+.ulListeFromSearch div:hover,
+.ulListeToSearch div:hover{
+    background-color: rgb(197, 226, 250);
+
+}
+.listeVisible{
+   display: block;
+   
+    
+}
+
+.liFrom, .liTo {
+    font-size: 18px;
+    margin-left: 65px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    background-position: 0 10px;   
+    
+}
+
+.boutonInverser{
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+    background-color:#335ecb;
+    color:#ffffff;
+    transition : 0.3s
+}
+
+.boutonInverser:hover{
+    background-color:#396ef5;
+}
+.boutonInverserMobile{
+    display: none;
+}
+
+.divResultat{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: auto;
+}
+.divButton{
+    display: flex;
+    
+}
+.buttonConvert{
+    
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    height: 40px;
+    background-color:#335ecb;
+    color: white;
+    font-weight: bold;
+    transition : 0.3s;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
+    margin: 0px auto 10px auto;
+}
+
+.buttonConvert:hover{
+    background-color:#396ef5;
+}
+.conversion{
+    margin-top:  15px;
+}
+.divCalcule{
+    display: flex;
+    align-items: center;
+
+}
+
+.pFrom, .pTo{
+    margin: 0;
+}
+.pFrom{
+    opacity: 0.7;
+}
+.pTo{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.txFrom, .txTo{
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.5;
+}
+.taux{
+    display: flex;
+    flex-direction: column;
+}
+.taux p{
+    margin: auto;
+}
+
+footer{
+    background-color: transparent;
+    /* background-image: linear-gradient(120deg,#2d31a4, #0c134e, #260558); */
+    color: rgb(236, 235, 235);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    clear: both;
+}
+footer p{
+    margin-right: 10px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.animate__animated.animate__fadeIn {
+    --animate-duration: 0.3s;
+}
+.animate__animated.animate__fadeOut {
+    --animate-duration: 0.3s;
+}
+
+
+@media screen and (max-width: 640px) {
+    .liFrom, .liTo {        
+        margin-left: 40px;
+    }
+    .liDivFrom, .liDivTo{        
+        margin-left: 20px;
+        
+    }
+    .pTo {
+        font-size: 18px;
+    }
+    footer p{
+        padding: 10px;
+    
+    }
+}
+
+@media screen and (max-width: 560px) {
+    body{
+        min-height: auto;
+        margin: 0;
+        position: relative;
+    }
+    header{
+        position : static;
+        height: 80px;
+    }
+    header h1{
+        margin: 18px 0 auto;
+        font-size: 30px;
+        
+    }
+    .containerMain{
+        width: 100%;
+        height: 490px
+    }
+    form{
+        flex-direction: column;
+        margin: 5px auto 10px auto;
+    }
+    .divMontant{
+        width: 85%;
+    }
+    h3{
+        position: static;
+        top: 0px;
+    }
+    .containerFrom, .containerTo{
+        width: 85%;
+        position :static    
+    }
+    .divInputFrom, .divInputTo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        
+    }
+    .boutonselectFrom, .boutonselectTo{
+        position: static;        
+    }
+    .listeFrom, .listeTo, .listeFromSearch, .listeToSearch{
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 500px;
+        z-index : 1;
+    }
+    /* .divInputFrom{
+        display: block;
+    } */
+
+    .boutonInverserPC{
+        display: none;
+    }
+    .boutonInverserMobile{
+        display: block;
+        margin-top: 20px;
+    }
+    .containerTo h3{
+        margin-top: 0;
+    }
+    .divResultat{
+        flex-direction: column;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+   header h1{
+    margin-top: 0px;
+   }
+}
+
+
+
